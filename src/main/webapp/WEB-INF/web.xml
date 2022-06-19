@@ -31,4 +31,25 @@
         <servlet-name>user-login</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>login-process</servlet-name>
+        <jsp-file>/user/login-process.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login-process</servlet-name>
+        <url-pattern>/login-process</url-pattern>
+    </servlet-mapping>
+
+
+<!--    Dashboard-->
+
+    <servlet>
+        <servlet-name>dashboard-home</servlet-name>
+        <jsp-file>/dashboard/home.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dashboard-home</servlet-name>
+        <url-pattern>/user/home</url-pattern>
+    </servlet-mapping>
 </web-app>

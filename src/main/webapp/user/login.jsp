@@ -46,6 +46,7 @@
     </div>
 </nav>
 
+
 <main class="my-form">
     <div class="cotainer">
         <div class="row justify-content-center">
@@ -53,23 +54,22 @@
                 <div class="card">
                     <div class="card-header">Register</div>
                     <div class="card-body">
-                        <form name="my-form" onsubmit="return validform()" action="success.php" method="">
+                        <form name="my-form" onsubmit="return validform()" action="login-process" method="post">
 
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail
                                     Address</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email-address">
+                                    <input type="text" id="email_address" class="form-control" name="email">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="user_name" class="col-md-4 col-form-label text-md-right">User Name</label>
+                                <label for="user_name" class="col-md-4 col-form-label text-md-right">Password</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="user_name" class="form-control" name="username">
+                                    <input type="text" id="user_name" class="form-control" name="password">
                                 </div>
                             </div>
-
 
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -77,6 +77,23 @@
                                 </button>
                             </div>
                         </form>
+                        <div>
+                            <%
+                                String loginStatus = request.getParameter("loginStatus");
+                                if (loginStatus != null && loginStatus.equals("false")) {
+                            %>
+                            <label style="color: red; display: block; text-align: center">Login failed</label>
+                            <%
+                                }
+
+                            %>
+
+                            <div class="col-md-6">
+                                <label style="color: #d91616">
+
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
