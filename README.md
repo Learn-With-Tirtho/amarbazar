@@ -3,4 +3,4 @@
 
 ## Java EE simple project without any framework
 
-http:localhost:8080
+Base URL http://localhost:8080
